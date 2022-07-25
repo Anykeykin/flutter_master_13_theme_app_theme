@@ -208,8 +208,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     );
                   },
                   child: CircleAvatar(
+                    backgroundColor: Theme.of(context).backgroundColor,
                     radius: 40,
-                    child: Text('AB'),
+                    child: Text(
+                        'AB', style: Theme.of(context).textTheme.headline6,
+                    ),
                   ),
                 ),
               ],

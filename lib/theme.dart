@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-ThemeData _themeLight = ThemeData();
+ThemeData _themeLight = ThemeData.light();
 
 ThemeData themeLight = _themeLight.copyWith(
   textTheme: _textLight(_themeLight.textTheme),
@@ -17,6 +17,7 @@ ThemeData themeLight = _themeLight.copyWith(
     )
   ),
 
+  scaffoldBackgroundColor: Colors.white,
 
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: Colors.black54,
@@ -70,6 +71,7 @@ ThemeData themeLight = _themeLight.copyWith(
   progressIndicatorTheme: ProgressIndicatorThemeData(
     color: Colors.black54
   ),
+  backgroundColor: Colors.deepOrange[100],
 
   colorScheme: ColorScheme(
       brightness: Brightness.light,
@@ -94,6 +96,9 @@ TextTheme _textLight(TextTheme base) {
     headline4: base.headline4.copyWith(
       fontWeight: FontWeight.w500,
       fontSize: 25,
+    ),
+    headline6: base.headline6.copyWith(
+      color: Colors.white,
     )
   );
 }
